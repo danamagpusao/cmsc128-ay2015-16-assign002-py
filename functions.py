@@ -22,4 +22,16 @@ def countSubstrPattern(original, pattern):
     return count
 
 
+def isValidString(str1, alphabet):
+   
+    count = 0
+    for letter in str1:
+       if alphabet.count(letter) == 0:
+           return False
+  
+
+    return True
+
+
+
 
