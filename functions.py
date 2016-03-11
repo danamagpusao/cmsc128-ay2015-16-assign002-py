@@ -28,10 +28,18 @@ def isValidString(str1, alphabet):
     for letter in str1:
        if alphabet.count(letter) == 0:
            return False
-  
-
     return True
 
-
-
+def getSkew(str1, n):
+     c = 0
+     g = 0
+     ans = 0
+     for i in range(n):
+        if str1[i] == "C":
+            c = c + 1
+        if str1[i] == "G":
+            g = g + 1
+     return g-c
+  
+        
 
