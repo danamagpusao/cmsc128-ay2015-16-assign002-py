@@ -23,7 +23,6 @@ def countSubstrPattern(original, pattern):
 
 
 def isValidString(str1, alphabet):
-   
     count = 0
     for letter in str1:
        if alphabet.count(letter) == 0:
@@ -40,6 +39,23 @@ def getSkew(str1, n):
         if str1[i] == "G":
             g = g + 1
      return g-c
+
+def getMaxSkewN(str1, n):
+    maximum = 0 
+    for i in range(1,n+1):
+        if getSkew(str1, i) > maximum:
+            maximum = getSkew(str1, i)
+    return maximum
+
+def getMinSkewN(str1, n):
+    minimum = len(str1)
+    for i in range(1,n+1):
+        if getSkew(str1, i) < minimum:
+            minimum = getSkew(str1, i)
+    return minimum
+
+
   
-        
+
+       
 
